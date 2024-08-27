@@ -14,7 +14,7 @@ class CustomBottom extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 65,
+        height: 60,
         width: MediaQuery.sizeOf(context).width,
         alignment: Alignment.center,
         decoration: ShapeDecoration(
