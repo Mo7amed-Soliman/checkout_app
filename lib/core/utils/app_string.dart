@@ -8,5 +8,13 @@ abstract class AppString {
       discount = 'Discount',
       shipping = 'Shipping',
       total = 'Total',
-      completePayment = 'Complete Payment';
+      completePayment = 'Complete Payment',
+      thankYou = 'Thank you !',
+      yourTransactionWasSuccessful = 'Your transaction was successful',
+      date = 'Date',
+      time = 'Time',
+      to = 'To',
+      paid='PAID'
+      
+      ;
 }

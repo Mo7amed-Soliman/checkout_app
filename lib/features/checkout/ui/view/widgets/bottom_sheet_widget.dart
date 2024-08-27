@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:checkout_app/core/utils/app_assets.dart';
 import 'package:checkout_app/core/utils/app_styles.dart';
 import 'package:checkout_app/core/widgets/custom_bottom.dart';
+import 'package:checkout_app/features/checkout/ui/view/thank_you_view.dart';
 import 'package:checkout_app/features/checkout/ui/view/widgets/payment_method_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -54,7 +55,15 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
   void _callPaymentMethod() {
     switch (_selectedIndex) {
       case 0:
-        log('card 0');
+        Navigator.pop(context);
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return const ThankYouView();
+            },
+          ),
+        );
         break;
       case 1:
         log('card 1');

@@ -38,9 +38,21 @@ abstract class AppStyles {
           fontWeight: FontWeight.w600,
         ),
       ),
+      interRegular20 = GoogleFonts.inter(
+        textStyle: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
+        ),
+      ),
       interMedium22 = GoogleFonts.inter(
         textStyle: const TextStyle(
           fontSize: 22,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+      interMedium25 = GoogleFonts.inter(
+        textStyle: const TextStyle(
+          fontSize: 25,
           fontWeight: FontWeight.w500,
         ),
       ),

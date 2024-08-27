@@ -8,4 +8,8 @@ abstract class AppAssets {
   static const String pay = 'assets/svgs/pay.svg';
 
   static const String card = 'assets/svgs/card.svg';
+
+  static const String logoCard = 'assets/svgs/logo_card.svg';
+
+  static const String barcode = 'assets/svgs/barcode.svg';
 }
