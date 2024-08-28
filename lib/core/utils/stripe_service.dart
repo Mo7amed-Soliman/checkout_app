@@ -1,7 +1,9 @@
+import 'package:checkout_app/core/models/customer_input_model.dart';
 import 'package:checkout_app/core/networking/api_service.dart';
 import 'package:checkout_app/features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:checkout_app/features/checkout/data/models/payment_intent_model/payment_intent_model.dart';
 import 'package:checkout_app/keys.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 class StripeService {
@@ -44,5 +46,17 @@ class StripeService {
     );
 
     await displayPaymentSheet();
+  }
+
+  Future<Response> createCustomer(
+      {required CustomerInputModel customerInputModel}) async {
+    var response = await apiService.post(
+      url: 'https://api.stripe.com/v1/customers',
+      body: customerInputModel.toJson(),
+      token: Keys.stripeSecretKey,
+      contentType: 'application/x-www-form-urlencoded',
+    );
+
+    return response;
   }
 }
