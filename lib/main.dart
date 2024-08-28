@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 void main() {
-  Stripe.publishableKey = stripePublishableKey;
+  Stripe.publishableKey = Keys.stripePublishableKey;
   runApp(const MyApp());
 }
 
