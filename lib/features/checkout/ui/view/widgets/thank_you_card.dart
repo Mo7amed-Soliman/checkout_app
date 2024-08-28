@@ -59,7 +59,7 @@ class ThankYouCard extends StatelessWidget {
               thickness: 1.5,
               height: 60,
             ),
-            const TotalPrice(title: AppString.total, value: r'$50.97'),
+            const TotalPrice(title: AppString.total, value: r'$100.0'),
             SizedBox(height: getRelativeHeight(0.05)),
             const CustomCreditCart(),
             const Spacer(),

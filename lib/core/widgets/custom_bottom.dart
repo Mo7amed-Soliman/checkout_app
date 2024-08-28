@@ -6,9 +6,11 @@ class CustomBottom extends StatelessWidget {
     super.key,
     required this.text,
     required this.onTap,
+    this.isLoading = false,
   });
   final String text;
   final VoidCallback onTap;
+  final bool isLoading;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -23,10 +25,15 @@ class CustomBottom extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppStyles.radius),
           ),
         ),
-        child: Text(
-          text,
-          style: AppStyles.interMedium22,
-        ),
+        child: isLoading
+            ? const Center(
+                child: CircularProgressIndicator(
+                color: Colors.white,
+              ))
+            : Text(
+                text,
+                style: AppStyles.interMedium22,
+              ),
       ),
     );
   }
