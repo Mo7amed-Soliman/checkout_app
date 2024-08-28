@@ -1,3 +1,4 @@
+import 'package:checkout_app/core/di/dependency_injection.dart';
 import 'package:checkout_app/core/utils/size_confige.dart';
 import 'package:checkout_app/features/checkout/ui/view/my_cart_view.dart';
 import 'package:checkout_app/keys.dart';
@@ -5,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   Stripe.publishableKey = Keys.stripePublishableKey;
+  setupGetIt();
   runApp(const MyApp());
 }
 
