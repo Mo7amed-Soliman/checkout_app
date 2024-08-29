@@ -32,7 +32,7 @@ class CustomBottom extends StatelessWidget {
               ))
             : Text(
                 text,
-                style: AppStyles.interMedium22,
+                style: AppStyles.interMedium20,
               ),
       ),
     );
