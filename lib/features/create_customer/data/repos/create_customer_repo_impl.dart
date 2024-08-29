@@ -8,7 +8,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 class CreateCustomerRepoImpl extends CreateCustomerRepo {
-  late final StripeService stripeService;
+  final StripeService stripeService;
+
+  CreateCustomerRepoImpl(this.stripeService);
 
   @override
   Future<Either<Failure, CustomerModel>> createCustomer(
