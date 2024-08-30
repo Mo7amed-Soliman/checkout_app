@@ -1,5 +1,7 @@
 import 'dart:developer';
 
+import 'package:checkout_app/core/cache/cache_helper.dart';
+import 'package:checkout_app/core/di/dependency_injection.dart';
 import 'package:checkout_app/core/utils/app_assets.dart';
 import 'package:checkout_app/core/utils/app_styles.dart';
 import 'package:checkout_app/core/widgets/custom_bottom.dart';
@@ -22,6 +24,17 @@ class BottomSheetWidget extends StatefulWidget {
 
 class _BottomSheetWidgetState extends State<BottomSheetWidget> {
   int _selectedIndex = 0;
+  late String customerId;
+  @override
+  void initState() {
+    getCustomerId();
+    super.initState();
+  }
+
+  void getCustomerId() async {
+    customerId = await getIt<CacheHelper>().getData(key: 'customerId');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -106,6 +119,7 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
           paymentIntentInputModel: PaymentIntentInputModel(
             amount: '100',
             currency: 'USD',
+            customerId: customerId,
           ),
         );
         break;

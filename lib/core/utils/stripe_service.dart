@@ -16,7 +16,7 @@ class StripeService {
       url: 'https://api.stripe.com/v1/payment_intents',
       body: paymentIntentInputModel.toJson(),
       token: Keys.stripeSecretKey,
-      contentType: 'application/x-www-form-urlencoded',
+      contentType: Headers.formUrlEncodedContentType,
     );
 
     return PaymentIntentModel.fromJson(response.data);
@@ -54,7 +54,7 @@ class StripeService {
       url: 'https://api.stripe.com/v1/customers',
       body: customerInputModel.toJson(),
       token: Keys.stripeSecretKey,
-      contentType: 'application/x-www-form-urlencoded',
+      contentType: Headers.formUrlEncodedContentType,
     );
 
     return response;
