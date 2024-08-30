@@ -16,10 +16,9 @@ class CreateCustomerRepoImpl extends CreateCustomerRepo {
   Future<Either<Failure, CustomerModel>> createCustomer(
       {required CustomerInputModel customerInputModel}) async {
     try {
-      var response = await stripeService.createCustomer(
+      var customerModel = await stripeService.createCustomer(
         customerInputModel: customerInputModel,
       );
-      CustomerModel customerModel = CustomerModel.fromJson(response.data);
       return right(customerModel);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioError(e));
