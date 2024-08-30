@@ -34,6 +34,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
+  flutter_paypal_payment: ^1.0.6
   flutter_stripe: ^11.0.0
   flutter_svg: ^2.0.10+1
   get_it: ^7.7.0
