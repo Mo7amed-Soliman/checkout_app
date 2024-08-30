@@ -7,10 +7,12 @@ class CustomBottom extends StatelessWidget {
     required this.text,
     required this.onTap,
     this.isLoading = false,
+    this.color,
   });
   final String text;
   final VoidCallback onTap;
   final bool isLoading;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -20,7 +22,7 @@ class CustomBottom extends StatelessWidget {
         width: MediaQuery.sizeOf(context).width,
         alignment: Alignment.center,
         decoration: ShapeDecoration(
-          color: const Color(0xff34A853),
+          color: color ?? const Color(0xff34A853),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppStyles.radius),
           ),
@@ -32,7 +34,9 @@ class CustomBottom extends StatelessWidget {
               ))
             : Text(
                 text,
-                style: AppStyles.interMedium20,
+                style: color == null
+                    ? AppStyles.interMedium20
+                    : AppStyles.interMedium20.copyWith(color: Colors.white),
               ),
       ),
     );

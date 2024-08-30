@@ -25,7 +25,7 @@ class CreateCustomerForm extends StatelessWidget {
             controller: TextEditingController(),
             hintText: 'Email',
           ),
-          SizedBox(height: getRelativeHeight(0.3)),
+          SizedBox(height: getRelativeHeight(0.2)),
           BlocConsumer<CreateCustomerCubit, CreateCustomerState>(
             listener: (context, state) async {
               if (state is CreateCustomerSuccess) {
@@ -45,7 +45,8 @@ class CreateCustomerForm extends StatelessWidget {
               }
             },
             builder: (context, state) => CustomBottom(
-              text: 'Create Stripe Customer',
+              text: 'Create Customer',
+              color: const Color(0xff635aff),
               isLoading: state is CreateCustomerLoading,
               onTap: () async {
                 if (CreateCustomerCubit.get(context)

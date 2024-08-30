@@ -12,4 +12,6 @@ abstract class AppAssets {
   static const String logoCard = 'assets/svgs/logo_card.svg';
 
   static const String barcode = 'assets/svgs/barcode.svg';
+
+  static const String stripe = 'assets/images/stripe.png';
 }

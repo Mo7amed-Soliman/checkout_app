@@ -1,7 +1,7 @@
 import 'package:checkout_app/core/cache/cache_helper.dart';
 import 'package:checkout_app/core/di/dependency_injection.dart';
 import 'package:checkout_app/core/utils/size_confige.dart';
-import 'package:checkout_app/features/checkout/ui/view/my_cart_view.dart';
+import 'package:checkout_app/features/create_customer/ui/views/create_customer_view.dart';
 import 'package:checkout_app/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       home: Builder(
         builder: (context) {
           SizeConfig.initSize(context);
-          return const MyCartView();
+          return const CreateCustomerView();
         },
       ),
     );
