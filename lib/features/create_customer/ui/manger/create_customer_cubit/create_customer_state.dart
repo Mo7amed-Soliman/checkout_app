@@ -1,4 +1,4 @@
-import 'package:checkout_app/core/models/custmer_model/customer_model.dart';
+import 'package:checkout_app/features/create_customer/data/models/custmer_model/customer_model.dart';
 
 abstract class CreateCustomerState {}
 

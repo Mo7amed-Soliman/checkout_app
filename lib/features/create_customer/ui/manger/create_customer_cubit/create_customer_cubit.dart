@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:checkout_app/core/cache/cache_helper.dart';
 import 'package:checkout_app/core/di/dependency_injection.dart';
-import 'package:checkout_app/core/models/customer_input_model.dart';
+import 'package:checkout_app/features/create_customer/data/models/customer_input_model.dart';
 import 'package:checkout_app/features/create_customer/data/repos/create_customer_repo.dart';
 import 'package:checkout_app/features/create_customer/ui/manger/create_customer_cubit/create_customer_state.dart';
 import 'package:flutter/material.dart';

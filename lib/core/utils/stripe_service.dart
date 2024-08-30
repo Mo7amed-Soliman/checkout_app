@@ -1,6 +1,6 @@
-import 'package:checkout_app/core/models/custmer_model/customer_model.dart';
-import 'package:checkout_app/core/models/customer_input_model.dart';
-import 'package:checkout_app/core/models/init_payment_sheet_model.dart';
+import 'package:checkout_app/features/create_customer/data/models/custmer_model/customer_model.dart';
+import 'package:checkout_app/features/create_customer/data/models/customer_input_model.dart';
+import 'package:checkout_app/features/checkout/data/models/init_payment_sheet_model.dart';
 import 'package:checkout_app/core/networking/api_service.dart';
 import 'package:checkout_app/features/checkout/data/models/ephemeral_key_model/ephemeral_key_model.dart';
 import 'package:checkout_app/features/checkout/data/models/payment_intent_input_model.dart';
