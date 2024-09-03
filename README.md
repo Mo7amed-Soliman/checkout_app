@@ -20,7 +20,7 @@
           ├── checkout
           │   ├── /data
           |   |   ├── /models
-          │   |   └── /widgets
+          │   |   └── /repo
           │   ├── /ui
           |   |   ├── /manger
           │   |   └── /views
